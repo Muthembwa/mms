@@ -60,20 +60,46 @@
                     </div>
                     <!-- /.info-box -->
                 </div>
-                {{-- Widget - latest entries --}}
-                <div class="{{ $settings5['column_class'] }}">
-                    <h3>{{ $settings5['chart_title'] }}</h3>
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                @foreach($settings5['fields'] as $field)
+
+
+              
+<!-- recent activity -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="box">
+      <div class="box-header with-border">
+        <h2 class="box-title">{{ $settings5['chart_title'] }}</h2>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <span class="sr-only">Collapse</span>
+            </button>
+        </div>
+      </div><!-- /.box-header -->
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+
+                <table
+                    data-cookie-id-table="dashActivityReport"
+                    data-height="400"
+                    data-pagination="false"
+                    data-id-table="dashActivityReport"
+                    data-side-pagination="server"
+                    data-sort-order="desc"
+                    data-sort-name="admission_number"
+                    id="dashActivityReport"
+                    class="table table-striped snipe-table"
+                    data-url="{{ route('admin.students.index', ['sort' => 'admission_number', 'order' => 'asc']) }}">
+                    <tr>
+                    @foreach($settings5['fields'] as $field)
                                     <th>
                                         {{ ucfirst($field) }}
                                     </th>
                                 @endforeach
-                            </tr>
-                        </thead>
-                        <tbody>
+                    </tr>
+                    <tbody>
                             @forelse($settings5['data'] as $row)
                                 <tr>
                                     @foreach($settings5['fields'] as $field)
@@ -88,8 +114,8 @@
                                 </tr>
                             @endforelse
                         </tbody>
-                    </table>
-                </div>
+                    </thead>
+                </table>
 
                 {{-- Widget - latest entries --}}
                 <div class="{{ $settings6['column_class'] }}">

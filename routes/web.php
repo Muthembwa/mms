@@ -25,7 +25,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('students/destroy', 'StudentsController@massDestroy')->name('students.massDestroy');
     Route::resource('students', 'StudentsController');
     Route::delete('exams/destroy', 'ExamsController@massDestroy')->name('exams.massDestroy');
-    Route::resource('exams', 'ExamsController');
+    Route::resource('exams', 'ExamsController'); 
     Route::delete('marks/destroy', 'MarksController@massDestroy')->name('marks.massDestroy');
     Route::resource('marks', 'MarksController');
     Route::delete('broad-sheets/destroy', 'BroadSheetController@massDestroy')->name('broad-sheets.massDestroy');
