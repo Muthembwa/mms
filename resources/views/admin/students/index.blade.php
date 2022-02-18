@@ -50,63 +50,7 @@
                                     <th>
                                         {{ trans('cruds.student.fields.guardians_email') }}
                                     </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.mathematics') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.english') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.kiswahili') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.chemestry') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.biology') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.physics') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.history_and_government') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.geography') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.religious_education') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.agriculture') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.business_studies') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.computer_science') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.art_and_design') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.home_science') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.aviation') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.french') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.german') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.arabic') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.student.fields.music') }}
-                                    </th>
+                                   
                                     <th>
                                         &nbsp;
                                     </th>
@@ -142,63 +86,7 @@
                                         <td>
                                             {{ $student->guardians_email ?? '' }}
                                         </td>
-                                        <td>
-                                            {{ $student->mathematics ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->english ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->kiswahili ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->chemestry ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->biology ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->physics ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->history_and_government ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->geography ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->religious_education ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->agriculture ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->business_studies ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->computer_science ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->art_and_design ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->home_science ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->aviation ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->french ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->german ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->arabic ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $student->music ?? '' }}
-                                        </td>
+                                        
                                         <td>
                                             @can('student_show')
                                                 <a class="btn btn-xs btn-primary" href="{{ route('admin.students.show', $student->id) }}">
