@@ -15,7 +15,7 @@
                         @csrf
                         <div class="form-group {{ $errors->has('school_name') ? 'has-error' : '' }}">
                             <label for="school_name">{{ trans('cruds.school.fields.school_name') }}*</label>
-                            <input type="text" id="school_name" name="school_name" class="form-control" value="{{ old('school_name', isset($school) ? $school->school_name : '0') }}" required>
+                            <input type="text" id="school_name" name="school_name" class="form-control" value="{{ old('school_name', isset($school) ? $school->school_name : '') }}" required>
                             @if($errors->has('school_name'))
                                 <p class="help-block">
                                     {{ $errors->first('school_name') }}
@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group {{ $errors->has('sub_county') ? 'has-error' : '' }}">
                             <label for="sub_county">{{ trans('cruds.school.fields.sub_county') }}*</label>
-                            <input type="text" id="sub_county" name="sub_county" class="form-control" value="{{ old('sub_county', isset($school) ? $school->sub_county : '0') }}" required>
+                            <input type="text" id="sub_county" name="sub_county" class="form-control" value="{{ old('sub_county', isset($school) ? $school->sub_county : '') }}" required>
                             @if($errors->has('sub_county'))
                                 <p class="help-block">
                                     {{ $errors->first('sub_county') }}

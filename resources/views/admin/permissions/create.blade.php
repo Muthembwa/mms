@@ -15,7 +15,7 @@
                         @csrf
                         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                             <label for="title">{{ trans('cruds.permission.fields.title') }}*</label>
-                            <input type="text" id="title" name="title" class="form-control" value="{{ old('title', isset($permission) ? $permission->title : '0') }}" required>
+                            <input type="text" id="title" name="title" class="form-control" value="{{ old('title', isset($permission) ? $permission->title : '') }}" required>
                             @if($errors->has('title'))
                                 <p class="help-block">
                                     {{ $errors->first('title') }}
