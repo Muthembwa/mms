@@ -47,15 +47,7 @@ class UpdateStudentRequest extends FormRequest
             'guardians_email'    => [
                 'required',
             ],
-            'mathematics'        => [
-                'required',
-            ],
-            'english'            => [
-                'required',
-            ],
-            'kiswahili'          => [
-                'required',
-            ],
+            
         ];
     }
 }
