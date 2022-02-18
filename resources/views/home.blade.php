@@ -88,10 +88,10 @@
                     data-id-table="dashActivityReport"
                     data-side-pagination="server"
                     data-sort-order="desc"
-                    data-sort-name="admission_number"
+                    data-sort-name="created_at"
                     id="dashActivityReport"
                     class="table table-striped snipe-table"
-                    data-url="{{ route('admin.students.index', ['sort' => 'admission_number', 'order' => 'asc']) }}">
+                    >   
                     <tr>
                     @foreach($settings5['fields'] as $field)
                                     <th>
@@ -100,7 +100,7 @@
                                 @endforeach
                     </tr>
                     <tbody>
-                            @forelse($settings5['data'] as $row)
+            <!--   data   -->          @forelse($settings5['data'] as $row)
                                 <tr>
                                     @foreach($settings5['fields'] as $field)
                                         <td>
@@ -117,9 +117,25 @@
                     </thead>
                 </table>
 
-                {{-- Widget - latest entries --}}
-                <div class="{{ $settings6['column_class'] }}">
-                    <h3>{{ $settings6['chart_title'] }}</h3>
+               
+
+            </div>
+        </div>
+    </div>
+</div>
+{{-- Widget - latest entries --}}
+<div class="row">
+  <div class="col-md-12">
+    <div class="box">
+      <div class="box-header with-border">
+                    <h3 class="box-title">{{ $settings6['chart_title'] }}</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <span class="sr-only">Collapse</span>
+            </button>
+        </div>
+                
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -147,11 +163,35 @@
                         </tbody>
                     </table>
                 </div>
+    
 
+</div> <!--/row-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h2 class="box-title">{{ trans('global.grade') }} Curve</h2>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <span class="sr-only">Collapse</span>
+                    </button>
+                </div>
             </div>
-        </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="chart-responsive">
+                            <canvas id="statusPieChart" height="216"></canvas>
+                        </div> <!-- ./chart-responsive -->
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div><!-- /.box-body -->
+        </div> <!-- /.box -->
     </div>
-</div>
+    
+        
 @endsection
 @section('scripts')
 @parent
