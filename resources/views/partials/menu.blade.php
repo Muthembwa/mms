@@ -132,6 +132,16 @@
                                 </a>
                             </li>
                         @endcan
+                        @can('student_access')
+                            <li class="{{ request()->is('admin/studentsubjects') || request()->is('admin/studentsubjects/*') ? 'active' : '' }}">
+                                <a href="{{ route("admin.studentsubjects.index") }}">
+                                    <i class="fa-fw fas fa-user">
+
+                                    </i>
+                                    <span>{{ trans('cruds.student.title') }} {{ trans('cruds.subject.title') }}</span>
+                                </a>
+                            </li>
+                        @endcan
                     </ul>
                 </li>
             @endcan
