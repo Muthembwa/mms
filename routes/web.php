@@ -22,6 +22,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('streams', 'StreamController');
     Route::delete('subjects/destroy', 'SubjectsController@massDestroy')->name('subjects.massDestroy');
     Route::resource('subjects', 'SubjectsController');
+
+    Route::delete('studentsubjects/destroy', 'StudentsubjectsController@massDestroy')->name('studentsubjects.massDestroy');
+    Route::resource('studentsubjects', 'StudentsubjectsController');
+
     Route::delete('students/destroy', 'StudentsController@massDestroy')->name('students.massDestroy');
     Route::resource('students', 'StudentsController');
     Route::delete('exams/destroy', 'ExamsController@massDestroy')->name('exams.massDestroy');

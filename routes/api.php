@@ -10,6 +10,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     Route::apiResource('streams', 'StreamApiController');
     Route::apiResource('subjects', 'SubjectsApiController');
     Route::apiResource('students', 'StudentsApiController');
+    Route::apiResource('studentsubjects', 'StudentsubjectsApiController');
     Route::apiResource('exams', 'ExamsApiController');
     Route::apiResource('marks', 'MarksApiController');
     Route::apiResource('teams', 'TeamApiController');
